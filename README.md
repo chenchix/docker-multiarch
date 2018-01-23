@@ -5,7 +5,9 @@ One docker image to rule them all
 SUMMARY
 =======
 
-With this set of scripts you can create an image that can be executed in arm64 and x86_64 at a time. 
+With this set of scripts you can create an image that can be executed in arm64 and x86_64 at a time.
+
+Dockerfile and test code in src can be used to test the script
 
 
 HOW TO
@@ -24,6 +26,8 @@ And call docker build by passing --build-arg=ARCHITECTURE
 
 USAGE
 =====
+First, you need an account in docker.io, and then setup variables into run.sh DOCKER_PASSWORD and DOCKER_USER, then run the script
+
 ```
 ./run.sh DOCKER-USER IMAGENAME
 ```
