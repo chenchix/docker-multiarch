@@ -14,18 +14,19 @@ HOW TO
 Dockerfile:
 
 The key thing is to add this lines in your Dockerfile
-
+```
 ARG ARCH
 RUN if [[ "${ARCH}"X == "x86_64"X ]]; then DO X86_64 STUFF \
 else DO ARM64 STUFF; fi
-
+```
 And call docker build by passing --build-arg=ARCHITECTURE
 
 
 USAGE
 =====
-
+```
 ./run.sh DOCKER-USER IMAGENAME
+```
 
 DOCKER-USER: docker user in docker.io
 IMAGENAME: descriptive name for the image to be pushed.
@@ -37,9 +38,9 @@ DEPLOY
 ======
 
 For x86_64 arch run this:
-	docker run USERNAME/IMAGENAME_multiarch
+	```docker run USERNAME/IMAGENAME_multiarch```
 
 For arm64 arch run this:	
-	docker run USERNAME/IMAGENAME_multiarch
+	```docker run USERNAME/IMAGENAME_multiarch```
 
 
